@@ -100,9 +100,16 @@ img {
   position: sticky;
   top: 0;
   z-index: 9000;
-  background: var(--navy);
+  background: rgba(10, 31, 68, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: var(--white);
   box-shadow: var(--shadow);
+  transition: transform 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.nav.nav-hide {
+  transform: translateY(-100%);
 }
 
 .nav-inner {

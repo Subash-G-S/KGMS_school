@@ -277,4 +277,23 @@ document.addEventListener('DOMContentLoaded', function () {
       if (closeLightbox) closeLightbox();
     }
   });
+
+  // 9. SMART STICKY HEADER
+  let lastScrollY = window.scrollY;
+  const navbar = document.querySelector('.nav');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > 150) {
+        if (currentScrollY > lastScrollY && (!menu || !menu.classList.contains('open'))) {
+          navbar.classList.add('nav-hide');
+        } else {
+          navbar.classList.remove('nav-hide');
+        }
+      } else {
+        navbar.classList.remove('nav-hide');
+      }
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+  }
 });
