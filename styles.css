@@ -290,7 +290,7 @@ img {
   background-image:
     linear-gradient(rgba(6, 21, 51, .58),
       rgba(10, 31, 68, .64)),
-    url("KGMS/Entrance.png");
+    url("KGMS/Entrance.webp");
 
   background-size: cover;
   background-position: center center;
@@ -2050,7 +2050,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/Entrance.png");
+      url("KGMS/Entrance.webp");
   }
 
   20%,
@@ -2058,7 +2058,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/class-interior-from-back.png");
+      url("KGMS/class-interior-from-back.webp");
   }
 
   40%,
@@ -2066,7 +2066,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/computer-lab.png");
+      url("KGMS/computer-lab.webp");
   }
 
   60%,
@@ -2074,7 +2074,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/school-ground.png");
+      url("KGMS/school-ground.webp");
   }
 
   80%,
@@ -2082,7 +2082,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/Yoga.png");
+      url("KGMS/Yoga.webp");
   }
 }
 
@@ -2913,4 +2913,4 @@ select:focus-visible {
   }
 }
 
-
+
