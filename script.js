@@ -1,6 +1,17 @@
 // Krishnaswamy Nagar Ganga Nagar Matriculation School - Shared Scripts
+// LOADING SCREEN
+window.addEventListener('load', function () {
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen) {
+    loadingScreen.classList.add('hidden');
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 600); // match transition duration
+  }
+});
 
 document.addEventListener('DOMContentLoaded', function () {
+
   // 1. FOOTER YEAR
   const yearSpan = document.getElementById('y');
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
