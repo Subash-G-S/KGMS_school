@@ -290,7 +290,7 @@ img {
   background-image:
     linear-gradient(rgba(6, 21, 51, .58),
       rgba(10, 31, 68, .64)),
-    url("KGMS/Entrance.png");
+    url("KGMS/Entrance.webp");
 
   background-size: cover;
   background-position: center center;
@@ -2050,7 +2050,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/Entrance.png");
+      url("KGMS/Entrance.webp");
   }
 
   20%,
@@ -2058,7 +2058,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/class-interior-from-back.png");
+      url("KGMS/class-interior-from-back.webp");
   }
 
   40%,
@@ -2066,7 +2066,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/computer-lab.png");
+      url("KGMS/computer-lab.webp");
   }
 
   60%,
@@ -2074,7 +2074,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/school-ground.png");
+      url("KGMS/school-ground.webp");
   }
 
   80%,
@@ -2082,7 +2082,7 @@ footer a:hover {
     background-image:
       linear-gradient(rgba(6, 21, 51, .58),
         rgba(10, 31, 68, .64)),
-      url("KGMS/Yoga.png");
+      url("KGMS/Yoga.webp");
   }
 }
 
@@ -2874,4 +2874,43 @@ select:focus-visible {
     gap: 2rem;
   }
 }
-
+
+/* MOBILE VIEWPORTS OPTIMIZATIONS (WITHOUT CHANGING LAPTOP) */
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1.25rem !important; /* reduce standard section margins on mobile */
+  }
+
+  .page-head {
+    padding: 3rem 1.25rem 2.5rem !important; /* tighten header banner */
+  }
+}
+
+@media (max-width: 480px) {
+  .prayer-card-container {
+    padding: 2rem 1.15rem !important; /* tighter card padding on narrow phones */
+  }
+
+  .prayer-header h2 {
+    font-size: 1.65rem !important; /* scale down prayer header font size */
+  }
+
+  .prayer-verses p {
+    font-size: 1.05rem !important; /* scale down prayer text font size */
+  }
+
+  .number-card-compact {
+    padding: 0.85rem 1.1rem !important; /* tighter compact rows padding */
+    gap: 1rem !important;
+  }
+
+  .info-card-panel {
+    padding: 1.65rem 1.2rem !important; /* less padding inside info lists */
+  }
+
+  .info-list-details {
+    gap: 1.25rem !important;
+  }
+}
+
+
