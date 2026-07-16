@@ -2698,4 +2698,180 @@ select:focus-visible {
   .number-grid {
     grid-template-columns: 1fr;
   }
-}
+}
+
+/* SCHEDULE & CALENDAR DASHBOARD */
+.schedule-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.schedule-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider-left {
+  width: 50px;
+  height: 3px;
+  background: var(--gold);
+  margin-top: 0.75rem;
+}
+
+.text-left {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  margin-bottom: 2rem !important;
+}
+
+.number-grid-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.number-card-compact {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #fff;
+  border: 1px solid rgba(10, 31, 68, .07);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 4px 15px rgba(10, 31, 68, .04);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.number-card-compact:hover {
+  transform: translateX(4px);
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 10px 25px rgba(10, 31, 68, 0.08);
+}
+
+.number-card-compact.highlight-gold {
+  background: linear-gradient(90deg, #fffdf8, #fff);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.rule-number-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.number-card-compact .card-content h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  color: var(--navy);
+  margin: 0 0 0.15rem 0;
+  font-weight: 600;
+}
+
+.number-card-compact .card-content p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* INFO DASHBOARD LAYOUT */
+.info-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-card-panel {
+  background: #fff;
+  border: 1px solid rgba(10, 31, 68, 0.08);
+  border-radius: 24px;
+  padding: 2.25rem 2rem;
+  box-shadow: 
+    0 15px 35px rgba(10, 31, 68, 0.04),
+    0 0 0 1px rgba(212, 175, 55, 0.1);
+}
+
+.info-card-panel h3 {
+  font-size: 1.4rem;
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.25);
+  padding-bottom: 0.75rem;
+}
+
+.info-card-panel h3 .panel-icon {
+  color: var(--gold);
+}
+
+.info-list-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-list-details li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.info-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.08);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.info-list-details strong {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.info-list-details p {
+  color: var(--text);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 868px) {
+  .schedule-dashboard-grid,
+  .info-dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
