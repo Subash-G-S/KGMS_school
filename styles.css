@@ -1630,6 +1630,7 @@ section {
 .uniform-list svg {
   flex: 0 0 18px;
   color: var(--gold);
+  stroke: var(--gold);
   margin-top: .25rem;
 }
 
@@ -2462,3 +2463,76 @@ footer a:hover {
     transform: rotate(360deg);
   }
 }
+
+/* HANDBOOK REDESIGN STYLES */
+.text-center {
+  text-align: center !important;
+}
+
+/* PRAYER CARD STYLING */
+.prayer-card-container {
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  box-shadow: 
+    0 15px 40px rgba(10, 31, 68, 0.06),
+    0 0 0 1px rgba(212, 175, 55, 0.15);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.prayer-card-container::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px dashed rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.prayer-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--navy);
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+}
+
+.prayer-verses {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.prayer-verses p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* RESPONSIVE COLLAPSIBLE GRIDS FOR HANDBOOK */
+@media (max-width: 868px) {
+  .uniform-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .number-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .number-grid {
+    grid-template-columns: 1fr;
+  }
+}
