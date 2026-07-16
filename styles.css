@@ -1805,7 +1805,7 @@ footer {
   background: var(--navy-deep);
   color: #aab3cf;
   padding: 3.5rem 1.25rem 1.5rem;
-  margin-top: 4rem;
+  margin-top: 0;
   border-top: 3px solid var(--gold);
 }
 
