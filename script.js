@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
   // 7. GALLERY LIGHTBOX
-  const galleryTiles = document.querySelectorAll('.gallery-grid .tile img');
+  const galleryTiles = document.querySelectorAll('.gallery-grid .tile img, .committee-gallery-redesign img');
   let closeLightbox = null;
 
   if (galleryTiles.length > 0) {
