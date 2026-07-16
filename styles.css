@@ -2874,4 +2874,43 @@ select:focus-visible {
     gap: 2rem;
   }
 }
+
+/* MOBILE VIEWPORTS OPTIMIZATIONS (WITHOUT CHANGING LAPTOP) */
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1.25rem !important; /* reduce standard section margins on mobile */
+  }
+
+  .page-head {
+    padding: 3rem 1.25rem 2.5rem !important; /* tighten header banner */
+  }
+}
+
+@media (max-width: 480px) {
+  .prayer-card-container {
+    padding: 2rem 1.15rem !important; /* tighter card padding on narrow phones */
+  }
+
+  .prayer-header h2 {
+    font-size: 1.65rem !important; /* scale down prayer header font size */
+  }
+
+  .prayer-verses p {
+    font-size: 1.05rem !important; /* scale down prayer text font size */
+  }
+
+  .number-card-compact {
+    padding: 0.85rem 1.1rem !important; /* tighter compact rows padding */
+    gap: 1rem !important;
+  }
+
+  .info-card-panel {
+    padding: 1.65rem 1.2rem !important; /* less padding inside info lists */
+  }
+
+  .info-list-details {
+    gap: 1.25rem !important;
+  }
+}
+
 
