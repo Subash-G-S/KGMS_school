@@ -1805,7 +1805,7 @@ footer {
   background: var(--navy-deep);
   color: #aab3cf;
   padding: 3.5rem 1.25rem 1.5rem;
-  margin-top: 4rem;
+  margin-top: 0;
   border-top: 3px solid var(--gold);
 }
 
@@ -2404,124 +2404,89 @@ select:focus-visible {
   box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.4) !important;
 }
 
-/* MANAGEMENT COMMITTEE SECTION */
-.committee-gallery {
-  margin: 3rem auto;
+/* MANAGEMENT COMMITTEE SECTION - REDESIGNED */
+.committee-gallery-redesign {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 4rem auto 0;
   max-width: 1200px;
 }
 
-.gallery-grid-mini {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.committee-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2.5rem;
-  margin-top: 4rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.committee-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--white);
-  border-radius: 20px;
-  padding: 2.5rem 1.5rem;
-  box-shadow: 
-    0 15px 35px rgba(10, 31, 68, 0.05),
-    0 0 0 1px rgba(212, 175, 55, 0.1);
-  transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
-  text-align: center;
+.gallery-card-item {
   position: relative;
+  border-radius: 20px;
   overflow: hidden;
-}
-
-.committee-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.committee-card:hover {
-  transform: translateY(-8px);
+  border: 2px solid var(--gold);
   box-shadow: 
-    0 25px 50px rgba(10, 31, 68, 0.1),
-    0 0 0 1px rgba(212, 175, 55, 0.2);
+    0 15px 35px rgba(10, 31, 68, 0.3),
+    0 0 0 1px rgba(212, 175, 55, 0.15);
+  background: var(--navy-deep);
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.2, 1);
+  aspect-ratio: 4 / 3;
 }
 
-.committee-card:hover::before {
-  opacity: 1;
-}
-
-.monogram-avatar-small {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 10px 20px rgba(10, 31, 68, 0.15);
-  border: 3px solid var(--gold);
-  transition: transform 0.6s cubic-bezier(0.2, 1, 0.2, 1);
-}
-
-.committee-card:hover .monogram-avatar-small {
-  transform: scale(1.08) rotate(5deg);
-}
-
-.monogram-text-small {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: -1px;
-}
-
-.member-board {
+.gallery-card-item img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.2, 1);
 }
 
-.member-name {
-  font-size: 1.25rem;
-  color: var(--navy);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.gallery-card-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 30px 60px rgba(10, 31, 68, 0.4),
+    0 0 0 2px var(--gold-light);
 }
 
-.member-role {
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 500;
+.gallery-card-item:hover img {
+  transform: scale(1.08);
 }
+
+@media (max-width: 1024px) {
+  .committee-gallery-redesign {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .committee-gallery-redesign {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .gallery-card-item {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.bg-navy {
+  background: var(--navy) !important;
+  color: var(--white) !important;
+}
+
+.bg-navy .section-head h2 {
+  color: var(--white) !important;
+}
+
+.bg-navy .section-head p {
+  color: #cdd5ec !important;
+}
+
 
 /* Monogram Avatar for Correspondent */
-.principal .avatar.monogram-avatar {
+.principal .avatar .monogram-inner {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
-  border: 8px solid var(--gold);
-  box-shadow: 0 30px 60px rgba(10, 31, 68, 0.25);
-  width: 100%;
-  height: 100%;
   border-radius: 22px;
 }
 
-.principal .avatar.monogram-avatar .monogram-text {
+.principal .avatar .monogram-inner .monogram-text {
   font-family: 'Playfair Display', serif;
   font-size: 5rem;
   font-weight: 700;
