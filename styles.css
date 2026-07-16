@@ -100,9 +100,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 9000;
-  background: rgba(10, 31, 68, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--navy);
   color: var(--white);
   box-shadow: var(--shadow);
   transition: transform 0.4s cubic-bezier(0.2, 1, 0.2, 1);
@@ -2561,48 +2559,4 @@ select:focus-visible {
 .footer-address {
   font-size: 0.88rem;
   line-height: 1.7;
-}
-
-/* HANDBOOK SEARCH STYLES */
-.handbook-search-section {
-  padding: 0 1.25rem;
-}
-
-.search-wrap {
-  position: relative;
-  background: var(--white);
-  border-radius: 50px;
-  box-shadow: 
-    0 15px 35px rgba(10, 31, 68, 0.08),
-    0 0 0 1px rgba(212, 175, 55, 0.2);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.search-wrap:focus-within {
-  transform: translateY(-2px);
-  box-shadow: 
-    0 20px 40px rgba(10, 31, 68, 0.12),
-    0 0 0 2px var(--gold);
-}
-
-#handbookSearch {
-  width: 100%;
-  border: none;
-  padding: 1.15rem 1.5rem 1.15rem 3.5rem;
-  font-size: 1.05rem;
-  font-family: inherit;
-  color: var(--text);
-  background: transparent;
-  outline: none !important;
-}
-
-.search-wrap .search-icon {
-  position: absolute;
-  left: 1.35rem;
-  display: flex;
-  align-items: center;
-  pointer-events: none;
 }
